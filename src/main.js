@@ -11,11 +11,13 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 import axios from "axios";
 axios.defaults.baseURL = "http://localhost:3000/";
 axios.defaults.headers.post["Content-Type"] =
-  "application/x-www-form-urlencoded";
+    "application/x-www-form-urlencoded";
 
 import { store } from "./store/store";
+import router from './router'
 
 new Vue({
-  store,
-  render: h => h(App)
+    store,
+    router,
+    render: h => h(App)
 }).$mount("#app");
